@@ -1,0 +1,248 @@
+html {
+    font-size: 16px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    /*
+        Don't need javascript to accomplish this effect.
+    */
+    * {
+        scroll-behavior: smooth;
+    }
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --header-height: 6vh;
+    --margin-top-mobile: 140px;
+    --margin-top-desktop: 75px;
+}
+
+header {
+    margin: 0 auto;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    height: var(--header-height);
+    position: fixed;
+    top: 0;
+    background-color: white;
+}
+
+.left-part span {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: var(--header-height);
+}
+
+header img {
+    vertical-align: bottom;
+}
+
+.right-part {
+    width: 30%;
+    height: var(--header-height);
+}
+
+nav {
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover, nav a:link {
+    color: inherit;
+}
+
+main {
+    width: 80vw;
+    margin: 20px auto;
+}
+
+main .top {
+    text-align: center;
+    margin-top: var(--margin-top-desktop);
+}
+
+form {
+    text-align: center;
+}
+
+main .top input {
+    margin-top: 10px;
+    padding: 5px;
+}
+
+input[type="email"] {
+    width: 20em;
+}
+
+input[type="submit"] {
+    background-color: black;
+    color: white;
+    font-weight: 700;
+}
+
+.middle {
+    display: flex;
+    justify-content: center;
+}
+
+.cards {
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px;
+}
+
+.card {
+    display: flex;
+    margin: 10px 0;
+}
+
+.card .icon {
+    margin-right: 20px;
+}
+
+.card img {
+    margin: 20px;
+}
+
+.card .information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--margin-top-desktop);
+}
+
+.groups {
+    display: flex;
+    justify-content: space-around;
+    margin-top: var(--margin-top-desktop);
+}
+
+.group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 0 10px
+}
+
+.group-title {
+    width: 100%;
+    text-align: center;
+    background-color: #f0f0f0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 15px;
+}
+
+.group-image {
+    margin: 20px 0;
+}
+
+.group-description {
+    font-size: 1.1rem;
+    margin: 0 20px 15px 20px;
+}
+
+.group-button button {
+    background-color: black;
+    color: white;
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 20px;
+    padding: 10px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0 auto;
+    width: 80vw;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+footer ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+ul li {
+    list-style: none;
+    margin-left: 20px
+}
+
+footer span {
+    font-size: 0.8rem;
+    color: gray;
+}
+
+@media screen and (max-width: 1250px) {
+    nav {
+        flex-direction: column;
+        justify-content: center;
+        align-items: space-between;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    header {
+        margin: 0 auto;
+        width: 100vw;
+        min-height: var(--margin-top-mobile);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    main .top {
+        margin-top: var(--margin-top-mobile);
+    }
+    .cards {
+        padding-top: 140px;
+    }
+    .card {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card .icon {
+        margin: 0;
+    }
+    .card .information {
+        align-items: center;
+    }
+    .groups {
+        flex-direction: column;
+    }
+    .group {
+        margin: 20px 0;
+    }
+}
